@@ -5,6 +5,7 @@ import com.app.launchlist.data.SpacexLaunchError
 import com.app.launchlist.responses.SpacexLaunchResponse
 import org.joda.time.DateTime
 import retrofit2.Response
+import java.net.HttpURLConnection
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -14,6 +15,11 @@ internal class SpacexLaunchMapper {
         spacexLaunchResponseList: List<SpacexLaunchResponse>?
     ): List<SpacexLaunch>? = spacexLaunchResponseList?.mapNotNull {
         try {
+
+            // Any missing information would be handled in here.
+            // As per requires, with suitable other options provided.
+            // I just couldn't find any problems with their data.
+            // A couple of examples of why the mapper is used provided.
             SpacexLaunch(
                 launchName = it.name,
                 launchDate = DateTime.parse(it.launchDateUtc),
@@ -33,11 +39,9 @@ internal class SpacexLaunchMapper {
         }
     }
 
-    fun toError(error: Response<*>): SpacexLaunchError {
-        return SpacexLaunchError.BadRequest
-    }
-
-    fun x() {
-
+    fun toError(error: Response<*>): SpacexLaunchError = when (error.code()) {
+        // Handle errors here using sealed classes to pass data back if required etc.
+        HttpURLConnection.HTTP_BAD_REQUEST -> SpacexLaunchError.BadRequest
+        else -> SpacexLaunchError.BadRequest
     }
 }

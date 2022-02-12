@@ -98,7 +98,9 @@ class SpacexLaunchRepositoryImplTests {
             val itemOne = SpacexLaunch(
                 launchName = "Blah",
                 launchDate = DateTime.now(),
-                successful = false
+                launchDateFriendlyName = "Blah",
+                successful = false,
+                imageUrl = "Blug"
             )
             coEvery {
                 spacexLaunchMapper.toListOrNull(any())
