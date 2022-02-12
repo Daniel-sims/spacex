@@ -1,6 +1,7 @@
 package com.app.spacex
 
 import android.app.Application
+import com.app.core.di.coreModules
 import com.app.networking.di.networkingModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
@@ -15,6 +16,7 @@ class SpacexApp : Application() {
             modules(
                 listOf(
                     *networkingModules,
+                    *coreModules
                 )
             )
         }

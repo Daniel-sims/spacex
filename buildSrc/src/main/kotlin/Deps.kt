@@ -1,9 +1,10 @@
 object LocalLibraryModules {
-
+    const val networking = ":common:networking"
+    const val core = ":common:core"
 }
 
 object LocalFeatureModules {
-    const val networking = ":common:networking"
+
 }
 
 object Retrofit {
@@ -63,6 +64,19 @@ object Coroutine {
     private const val version = "1.6.0"
 
     const val coroutines_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"
+    const val coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
+    const val coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
 }
 
+object AndroidxCore {
+    private const val version = "1.7.0"
+
+    const val core = "androidx.core:core-ktx:$version"
+}
+
+object JodaDateTime {
+    private const val version = "2.10.9.1"
+
+    const val joda = "net.danlew:android.joda:$version"
+}
 

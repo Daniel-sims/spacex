@@ -37,7 +37,8 @@ android {
 dependencies {
 
     // local Feature Modules
-    implementation project(LocalFeatureModules.networking)
+    implementation project(LocalLibraryModules.networking)
+    implementation project(LocalLibraryModules.core)
 
     // Koin
     implementation Koin.koin_android

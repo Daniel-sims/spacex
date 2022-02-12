@@ -13,7 +13,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/common/core" />
             <option value="$PROJECT_DIR$/common/networking" />
+            <option value="$PROJECT_DIR$/feature-api" />
+            <option value="$PROJECT_DIR$/feature-api/launchlist" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
