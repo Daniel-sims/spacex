@@ -5,5 +5,7 @@ import org.joda.time.DateTime
 data class SpacexLaunch(
     val launchName: String,
     val launchDate: DateTime,
-    val successful: Boolean
+    val launchDateFriendlyName: String,
+    val successful: Boolean,
+    val imageUrl: String
 )

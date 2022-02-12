@@ -44,11 +44,18 @@ dependencies {
     implementation(Koin.koin_android)
     implementation(Koin.koin_core)
 
+    // Joda
+    implementation(JodaDateTime.joda)
+
     // Compose stuff
     implementation(ComposeUi.ui)
     implementation(ComposeUi.ui_tooling)
     implementation(ComposeMaterial.material)
+    implementation(ComposeMaterial.material_icons_extended)
     implementation(ComposeFoundation.foundation)
+
+    // Coil
+    implementation(Coil.coil)
 
     // Navigation
     implementation(AndroidxNavigation.navigation_fragment)

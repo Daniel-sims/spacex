@@ -133,3 +133,9 @@ object GoogleMaterial {
 
     const val material = "com.google.android.material:material:$version"
 }
+
+object Coil {
+    private const val version = "1.3.1"
+
+    const val coil = "io.coil-kt:coil-compose:$version"
+}

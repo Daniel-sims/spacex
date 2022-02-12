@@ -5,6 +5,8 @@ import com.app.launchlist.data.SpacexLaunchError
 import com.app.launchlist.responses.SpacexLaunchResponse
 import org.joda.time.DateTime
 import retrofit2.Response
+import java.text.SimpleDateFormat
+import java.util.*
 
 internal class SpacexLaunchMapper {
 
@@ -15,9 +17,14 @@ internal class SpacexLaunchMapper {
             SpacexLaunch(
                 launchName = it.name,
                 launchDate = DateTime.parse(it.launchDateUtc),
-                successful = it.success
+                launchDateFriendlyName = SimpleDateFormat(
+                    "d MMMM, yyyy",
+                    Locale.getDefault()
+                ).format(DateTime.parse(it.launchDateUtc).toDate()),
+                successful = it.success,
+                imageUrl = it.links?.patch?.small ?: "https://picsum.photos/200"
             )
-        } catch (ex : Exception) {
+        } catch (ex: Exception) {
             // Log to some logger such as Sentry to monitor exceptions during mapping
             // as it may flag a problem with malformed data coming from the backend. Unit
             // tests should try and break the data passed in as much as possible so you
@@ -26,7 +33,11 @@ internal class SpacexLaunchMapper {
         }
     }
 
-    fun toError(error : Response<*>) : SpacexLaunchError {
+    fun toError(error: Response<*>): SpacexLaunchError {
         return SpacexLaunchError.BadRequest
+    }
+
+    fun x() {
+
     }
 }

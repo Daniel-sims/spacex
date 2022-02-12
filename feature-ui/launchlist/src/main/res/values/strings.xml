@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="launch_list_title">Space x launches</string>
+    <string name="launch_list_loading_message">Loading launches...</string>
+</resources>
