@@ -33,7 +33,7 @@ dependencies {
     // Local modules
     implementation(project(LocalFeatureModules.launchlist_api))
     implementation(project(LocalLibraryModules.styles))
-
+    implementation(project(LocalLibraryModules.core))
     // Fragment
     implementation(AndroidxFragment.fragment)
 

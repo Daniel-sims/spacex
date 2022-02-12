@@ -12,10 +12,7 @@ internal class NetworkingImpl(
         clazz: Class<T>
     ): T = retrofit
         .newBuilder()
-        .client(okHttpClient.newBuilder().build()).apply {
-            // This can be passed as a koin param through koin.properties
-            baseUrl("https://api.spacexdata.com/v4/")
-        }
+        .client(okHttpClient)
         .build()
         .create(clazz)
 }
