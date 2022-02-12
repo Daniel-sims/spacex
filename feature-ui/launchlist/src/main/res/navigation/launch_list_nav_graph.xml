@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/launch_list_nav_graph"
+    app:startDestination="@id/launchListFragment">
+
+    <fragment
+        android:id="@+id/launchListFragment"
+        android:name="com.app.featureui.launchlist.ui.LaunchListFragment"
+        android:label="LaunchListFragment" />
+</navigation>

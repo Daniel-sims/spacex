@@ -15,8 +15,11 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/common/core" />
             <option value="$PROJECT_DIR$/common/networking" />
+            <option value="$PROJECT_DIR$/common/styles" />
             <option value="$PROJECT_DIR$/feature-api" />
             <option value="$PROJECT_DIR$/feature-api/launchlist" />
+            <option value="$PROJECT_DIR$/feature-ui" />
+            <option value="$PROJECT_DIR$/feature-ui/launchlist" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,10 +1,12 @@
 object LocalLibraryModules {
     const val networking = ":common:networking"
     const val core = ":common:core"
+    const val styles = ":common:styles"
 }
 
 object LocalFeatureModules {
-
+    const val launchlist = ":feature-ui:launchlist"
+    const val launchlist_api = ":feature-api:launchlist"
 }
 
 object Retrofit {
@@ -80,3 +82,54 @@ object JodaDateTime {
     const val joda = "net.danlew:android.joda:$version"
 }
 
+object ComposeUi {
+    private const val version = "1.1.0-rc01"
+
+    const val ui = "androidx.compose.ui:ui:$version"
+    const val ui_tooling = "androidx.compose.ui:ui-tooling:$version"
+}
+
+object ComposeMaterial {
+    private const val version = "1.1.0-rc01"
+
+    const val material = "androidx.compose.material:material:$version"
+    const val material_icons_extended = "androidx.compose.material:material-icons-extended:$version"
+}
+
+object ComposeFoundation {
+    private const val version = "1.1.0-rc01"
+
+    const val foundation = "androidx.compose.foundation:foundation:$version"
+    const val foundation_layout = "androidx.compose.foundation:foundation-layout:$version"
+}
+
+object ComposeRuntime {
+    private const val version = "1.1.0-rc01"
+
+    const val runtime = "androidx.compose.runtime:runtime:$version"
+}
+
+object AndroidxFragment {
+    private const val version = "1.3.5"
+
+    const val fragment = "androidx.fragment:fragment-ktx:$version"
+}
+
+object AndroidxViewModel {
+    private const val version = "2.4.0"
+
+    const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$version"
+}
+
+object AndroidxNavigation {
+    private const val version = "2.4.0-rc01"
+
+    const val navigation_fragment = "androidx.navigation:navigation-fragment-ktx:$version"
+    const val navigation_ui = "androidx.navigation:navigation-ui-ktx:$version"
+}
+
+object GoogleMaterial {
+    private const val version = "1.5.0-rc01"
+
+    const val material = "com.google.android.material:material:$version"
+}
